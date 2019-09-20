@@ -59,6 +59,7 @@
         $weekend = FALSE;
         $afstand = 9;
 
+        /* MtS: stijl-puntje - met krulhaakjes { } is het iets leesbaarder voor andere programmeurs */
         if(!$weekend && $afstand > 10) print('met de auto!');
         else print('fietsen!');
 
@@ -71,7 +72,7 @@
         $aantal = 100;
         $vasteKlant = TRUE;
 
-        $subTotaal = $prijsPerStuk * $aantal;
+        $subTotaal = $prijsPerStuk * $aantal;       /* MtS: slim gebruik van variabelen voor (sub)totaal */
 
         if($subTotaal < 100) {
 
@@ -84,6 +85,7 @@
 
         print('totaalprijs: ' . $subTotaal . '<br>verzendkosten: ' . $verzendKosten);
 
+        /* MtS: logica-foutje - verwerk eerst de korting, voordat je verzendkosten berekent */
         if($vasteKlant) {
 
             $totaal = $totaal * 0.9;
@@ -202,7 +204,7 @@
         ?>
         <form action="/oefentoets1.php" method="post">
             <div>
-                <label for="aantal">Hoe vaak wil je met de dobbelstenen gooien?:</label>
+                <label for="aantal">Hoe vaak wil je met de dobbelstenen gooien?:</label> <!-- MtS: :-) jij hebt ervaring in webdevelopment... -->
                 <input id="aantal" name="aantal">
             </div>
             <button type="submit">Verzenden</button>
